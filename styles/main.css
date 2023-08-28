@@ -260,7 +260,7 @@ button.hamburger svg {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   padding: 1em;
 }
 
@@ -278,28 +278,34 @@ button.hamburger svg {
 }
 
 .card .circle svg {
-  width: 100%;
+  width: 70px;
   height: auto;
+  fill: var(--brand-primary-ultra-light);
 }
 
-.card .ai .cls-1,
+
+.card .circle svg g#Icon-Set {
+  fill: var(--brand-primary-ultra-light);
+}
+
+.card.ai .cls-1,
 .cls-2 {
   fill: none;
-  stroke: #353535;
+  stroke: var(--brand-primary-ultra-light);
   stroke-linecap: round;
   stroke-width: 2px;
 }
 
-.card .ai .cls-1 {
+.card.ai .cls-1 {
   stroke-linejoin: round;
 }
 
-.card .ai .cls-2 {
+.card.ai .cls-2 {
   stroke-miterlimit: 10;
 }
 
-.card .ai .cls-3 {
-  fill: #353535;
+.card.ai .cls-3 {
+  fill: var(--brand-primary-ultra-light);
 }
 
 .card h2 {
