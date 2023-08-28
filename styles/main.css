@@ -3,10 +3,13 @@
 /* Colors */
 :root {
   --brand-primary: #526C69;
-  --brand-secondary: #CBCCAD;
-  --brand-primary-dark: #223542;
-  --highlight: #D89646;
-  --info: #5B3C1F;
+  --brand-primary-dark: #425b5d;
+  --brand-primary-ultra-dark: #223542;
+  --brand-primary-light: #94a691;
+  --brand-primary-ultra-light: #CBCCAD;
+  --brand-secondary: #D89646;
+  --brand-secondary-dark: #5b3c1f;
+  --brand-secondary-light: #f6e9c8;
   --black: #010101;
   --white: #F7F9FB;
 }
@@ -59,11 +62,11 @@ h3 {
 #superheader {
   display: flex;
   justify-content: space-between;
-  background: var(--highlight);
+  background: var(--brand-primary);
   margin: 0;
   padding: 0.5em 1em;
   font-size: 1em;
-  color: var(--brand-primary);
+  color: var(--brand-secondary-light);
 }
 
 #superheader>span {
@@ -76,16 +79,16 @@ h3 {
 #superheader a {
   display: flex;
   align-items: center;
-  color: var(--brand-primary);
+  color: var(--brand-secondary-light);
   text-decoration: none;
 }
 
 #superheader a:hover {
-  color: var(--brand-primary-dark);
+  color: var(--brand-primary-light);
 }
 
 #superheader span svg.stroke {
-  stroke: var(--brand-primary);
+  stroke: var(--brand-secondary-light);
 }
 
 #superheader svg {
@@ -93,11 +96,11 @@ h3 {
 }
 
 #superheader span svg.fill {
-  fill: var(--brand-primary);
+  fill: var(--brand-secondary-light);
 }
 
 #superheader span a:hover svg.stroke {
-  stroke: var(--brand-primary-dark);
+  stroke: var(--brand-primary-light);
 }
 
 /* hide "Pensacola, FL" on small devices */
@@ -111,12 +114,32 @@ header,
 header>span {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 header {
   /* Position relative for navigation */
   position: relative;
 }
+
+/* Logo */
+
+header .site-logo svg {
+  width: 300px;
+  height: auto;
+  /* Don't break on tiny screens */
+  max-width: 60vw;
+}
+
+header .site-logo svg {
+  stroke: none;
+  fill: var(--brand-secondary-light);
+}
+
+header .site-logo svg #paper-plane {
+  fill: var(--brand-secondary-light);
+}
+
 
 /* Navigation */
 
@@ -131,6 +154,7 @@ header nav {
   align-items: center;
   padding: 0;
   margin: 0;
+  font-size: 1.5em;
 }
 
 header nav.showMenu {
@@ -146,26 +170,27 @@ header nav ul {
   list-style: none;
   margin: 1em 0;
   padding: 1em;
-  background: var(--brand-primary);
   width: 92%;
-  height: 0;
-  font-size: 1.5em;
-  transition: height 3s;
 }
 
 header nav ul li {
   margin: 0.7em 0;
   padding: 0.5em 0;
-  border-bottom: var(--brand-secondary) solid 1px;
+  border-bottom: var(--brand-secondary-dark) solid 1px;
+}
+
+header nav ul li a:hover {
+  color: var(--brand-primary-light);
 }
 
 header nav ul li a {
   text-decoration: none;
+  color: var(--brand-secondary-light);
 }
 
 button.hamburger {
   height: fit-content;
-  background: var(--brand-secondary);
+  background: var(--brand-primary-light);
   border-radius: 2px;
   border: none;
   display: flex;
@@ -178,7 +203,7 @@ button.hamburger svg {
 }
 
 footer a {
-  color: var(--brand-secondary);
+  color: var(--brand-primary-light);
 }
 
 footer a:hover {
@@ -192,7 +217,7 @@ footer {
 
 header,
 footer {
-  background-color: var(--brand-primary-dark);
+  background-color: var(--brand-primary-ultra-dark);
   padding: 1em;
 }
 
@@ -222,24 +247,33 @@ section:not(#portfolio) {
   padding: 0.8em 3em 2em;
 }
 
+@media (min-width: 600px) {
 
-.site-logo svg {
-  fill: var(--brand-secondary);
-  stroke: var(--brand-secondary);
-  width: 300px;
-  height: auto;
-  /* Don't break on tiny screens */
-  max-width: 60vw;
-}
+  #superheader>span:nth-child(2) {
+    display: flex;
+  }
 
-/* @media (min-width: 600px) {
-  header>span nav {
+  button.hamburger {
+    display: none;
+  }
+
+  header nav {
+    display: inline-block;
+    background: none;
+    position: static;
+    font-size: 1em;
+  }
+
+  header nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
-  #superheader > span:nth-child(2) {
-      display: none;
+  header nav ul li {
+    border: none;
+    padding: 0;
+    margin: 0 0.5em;
   }
-} */
+}
