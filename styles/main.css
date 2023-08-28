@@ -54,7 +54,7 @@ h3 {
   text-align: center;
 }
 
-
+/* Superheader */
 
 #superheader {
   display: flex;
@@ -100,26 +100,81 @@ h3 {
   stroke: var(--brand-primary-dark);
 }
 
-#scrollToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  fill: var(--brand-secondary);
-  background-color: var(--brand-primary);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  transition: 1.5s ease-in
+/* hide "Pensacola, FL" on small devices */
+#superheader>span:nth-child(2) {
+  display: none;
 }
 
-#scrollToTop:hover {
-  opacity: 1;
+/* Header */
+
+header,
+header>span {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  /* Position relative for navigation */
+  position: relative;
+}
+
+/* Navigation */
+
+header nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--brand-primary);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header nav.showMenu {
+  display: flex;
+  height: fit-content;
+}
+
+header nav.showMenu ul {
+  height: fit-content;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--brand-primary);
+  width: 92%;
+  height: 0;
+  font-size: 1.5em;
+  transition: height 3s;
+}
+
+header nav ul li {
+  margin: 0.7em 0;
+  padding: 0.5em 0;
+  border-bottom: var(--brand-secondary) solid 1px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+button.hamburger {
+  height: fit-content;
+  background: var(--brand-secondary);
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+button.hamburger svg {
+  stroke: var(--brand-primary-dark);
 }
 
 footer a {
@@ -176,3 +231,15 @@ section:not(#portfolio) {
   /* Don't break on tiny screens */
   max-width: 60vw;
 }
+
+/* @media (min-width: 600px) {
+  header>span nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #superheader > span:nth-child(2) {
+      display: none;
+  }
+} */

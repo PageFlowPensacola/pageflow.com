@@ -5,16 +5,6 @@ window.onscroll = function () {
   checkScroll();
 }
 
-function checkScroll() {
-  if (window.scrollY > 500) {
-    document.getElementById('scrollToTop').style.opacity = '0.5';
-  }
-
-  if (window.scrollY < 100) {
-    document.getElementById('scrollToTop').style.opacity = '0';
-  }
-}
-
 on('click', '#downarrow', function (event) {
   event.match.closest('section').nextElementSibling.scrollIntoView({ behavior: "smooth" });
 });
@@ -42,14 +32,11 @@ on('click', ".menu", function (event) {
 });
 
 const burgerClick = function () {
+  console.log("burgerClick");
   DOM(".menu").classList.toggle("showMenu");
   DOM('#menutop').classList.toggle("showMenu");
   DOM('#menumid').classList.toggle("showMenu");
   DOM('#menubot').classList.toggle("showMenu");
 }
 
-on("click", "#hamburger", burgerClick);
-
-on('click', '#scrollToTop', function (event) {
-  DOM("header").scrollIntoView({behavior: "smooth"});
-});
+on("click", "button.hamburger", burgerClick);
