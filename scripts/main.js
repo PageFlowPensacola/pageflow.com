@@ -1,10 +1,6 @@
 import {choc, set_content, on, DOM} from './factory.js';
 const {H1, "svg:a": SVGA, "svg:g": GROUP, "svg:circle": CIRCLE, "svg:path": PATH, "svg:svg": SVG, "svg:text": SVGTEXT} = choc; //autoimport
 
-window.onscroll = function () {
-  checkScroll();
-}
-
 on('click', '#downarrow', function (event) {
   event.match.closest('section').nextElementSibling.scrollIntoView({ behavior: "smooth" });
 });
@@ -13,16 +9,16 @@ on('click', ".menu", function (event) {
   event.preventDefault();
   burgerClick();
   switch (event.target.id) {
-    case 'service':
-      DOM("#service").scrollIntoView({ behavior: "smooth" });
+    case 'servicesLink':
+      DOM("#services").scrollIntoView({ behavior: "smooth" });
       break;
-    case 'howitworks':
+    case 'howitworksLink':
       DOM("#howitworks").scrollIntoView({behavior: "smooth"});
       break;
-    case 'about':
+    case 'aboutLink':
       DOM("#about").scrollIntoView({ behavior: "smooth" });
       break;
-    case 'contact':
+    case 'contactLink':
       DOM("#contact").scrollIntoView({behavior: "smooth"});
       break;
     default:
@@ -32,7 +28,6 @@ on('click', ".menu", function (event) {
 });
 
 const burgerClick = function () {
-  console.log("burgerClick");
   DOM(".menu").classList.toggle("showMenu");
   DOM('#menutop').classList.toggle("showMenu");
   DOM('#menumid').classList.toggle("showMenu");
