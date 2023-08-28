@@ -158,11 +158,28 @@ Mike is raising two daughters with his partner Rivka and stays active in the Bro
 We feel very fortunate to have a small team of fantastic folks who pick up documents and scan them into our system for clients who require it. Eventually we aim to tell you who they are, but at the moment, they are being shy.
 
 </section>
-<section markdown=1>
+<section markdown=1 id="contact-section">
 
 ## Contact
 
-  <div class="row">
-
+  <div class="row two">
+    <div class=infobox>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 6H12.01M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <address>
+        <h3>PageFlow</h3>
+        <p>1 Palafox Place</p>
+        <p>Pensacola, FL 32501</p>
+        <p class=phonenumber>850 999-9999</p>
+        <p>info@pageflow.com</p>
+      </address>
+    </div> <!-- ./infobox -->
+    <form>
+      <input type=text name=name placeholder="Name" required/>
+      <input type=email name=email placeholder="Email" required/>
+      <input type=textarea rows=5 name=message placeholder="Your message" required>
+      <button type=submit>Submit</button>
+    </form>
   </div>
 </section>

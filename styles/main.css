@@ -316,8 +316,80 @@ section>p {
 
 .card .square svg path {
   stroke: var(--brand-primary-ultra-dark);
-  fill: none;
 }
+
+/* Contact */
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--brand-secondary-light);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--brand-primary-ultra-dark);
+}
+
+.infobox svg {
+  stroke: var(--brand-primary-ultra-dark);
+  fill: none;
+  width: 200px;
+  height: auto;
+}
+
+.infobox address {
+  font-style: normal;
+}
+
+.infobox address h3 {
+  text-align: left;
+  font-family: 'Asap', sans-serif;
+}
+
+p.phonenumber {
+  margin-top: 2em;
+}
+
+#contact-section {
+  justify-content: space-between;
+}
+
+#contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+  padding-top: 2em;
+}
+
+#contact-section form input {
+  background: var(--brand-primary-ultra-light);
+  border: 1px solid var(--brand-primary-ultra-dark);
+  padding: 1em;
+}
+
+button {
+  font-family: 'MuseoModerno', sans-serif;
+  background: var(--brand-primary-ultra-dark);
+  color: var(--brand-primary-ultra-light);
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  width: fit-content;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* .infobox svg path {
+  stroke: var(--brand-primary-ultra-dark);
+  fill: none;
+  width: 100px;
+  height: auto;
+} */
 
 svg path#hishead,
 svg path#hisleftarm,
@@ -399,21 +471,23 @@ footer {
 }
 
 
-/* BS5 Breakpoints (
+/* BS5 Breakpoints
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
   xxl: 1400px
-); */
+*/
 
 @media (min-width: 992px) {}
 
 @media (min-width: 768px) {
 
-  .row.two .card {
-    width: 45%;
+  .row.two .card,
+  .row.two .infobox,
+  .row.two form {
+    max-width: 45%;
   }
 
   .row.three .card {
