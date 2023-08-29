@@ -56,7 +56,7 @@ on("submit", "#contactform", function (event) {
       set_content('.formnotification', P(`Message sent. We'll get back to you ASAP.`));
       DOM('.formnotification').classList.remove('error');
       DOM('.formnotification').classList.add('success');
-      /* DOM('#contactform').reset(); */
+      DOM('#contactform').reset();
     } else {
       set_content('.formnotification', P(`Whoops. Please try calling or emailing us.`));
       DOM('.formnotification').classList.remove('success');
