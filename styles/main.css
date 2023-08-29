@@ -234,6 +234,23 @@ section>p {
   margin: 1em auto;
 }
 
+section.paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  background: var(--white);
+}
+
+section.paragraph p {
+  max-width: 800px;
+}
+
+section.paragraph h2,
+section.paragraph h3 {
+  text-align: left;
+}
+
 /* Hero */
 .hero {
   background-image: url(../images/hero.jpg);
