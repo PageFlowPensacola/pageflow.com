@@ -40,6 +40,8 @@ on("submit", "#contactform", function (event) {
   event.preventDefault();
   const formData = new FormData(event.match);
   const data = Object.fromEntries(formData.entries());
+  console.log(data);
+  console.log(JSON.stringify(data));
   fetch(event.match.action, {
     method: event.match.method,
     headers: {
@@ -51,17 +53,20 @@ on("submit", "#contactform", function (event) {
     body: JSON.stringify(data)
   }).then(response => {
     if (response.status === 200) {
-      set_content('.formnotification', P({class: 'success'}, `Message sent. We'll get back to you ASAP.`));
+      set_content('.formnotification', P(`Message sent. We'll get back to you ASAP.`));
+      DOM('.formnotification').classList.remove('error');
       DOM('.formnotification').classList.add('success');
-      DOM('#contactform').reset();
+      /* DOM('#contactform').reset(); */
     } else {
-      set_content('.formnotification', P({class: 'error'}, `Whoops. Please try calling or emailing us.`));
+      set_content('.formnotification', P(`Whoops. Please try calling or emailing us.`));
+      DOM('.formnotification').classList.remove('success');
       DOM('.formnotification').classList.add('error');
       DOM('#contactform').reset();
     }
   }).catch(error => {
     console.error(error);
-    set_content('.formnotification', P({class: 'error'}, `Whoops. Please try calling or emailing us.`));
+    set_content('.formnotification', P(`Whoops. Please try calling or emailing us.`));
+    DOM('.formnotification').classList.remove('success');
     DOM('.formnotification').classList.add('error');
     DOM('#contactform').reset();
   });

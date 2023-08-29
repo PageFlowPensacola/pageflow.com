@@ -50,7 +50,7 @@ category: full-width image-captions
         </svg>
 
       </div>
-      <p>We pick up your documents and scan them for you on a regular schedule–depending on your frequency needs–as often as five days a week.</p>
+      <p>We can pick up your documents and  <em>scan them for you</em> on a regular schedule–depending on your frequency needs–as often as five days a week.</p>
     </div>
     <div class="card ai">
       <h2>AI Content Analysis</h2>
@@ -82,7 +82,7 @@ category: full-width image-captions
         </svg>
 
       </div>
-      <p>Document text is analyzed and processed through our machine learning algorithm for categorization and application of other taxonomies relevant to specific customer requirements.</p>
+      <p>Document text is analyzed and processed through our machine learning algorithm for categorization according to taxonomies you define (we can help with that, too.)</p>
     </div>
   </div>
 </section>
@@ -93,19 +93,19 @@ category: full-width image-captions
   <div class="row four">
     <div class=card>
       <h3>1</h3>
-      <p>Your scanned JPG or TIFF files are analyzed by Optical Character Recognition technology, converting what comes in as pixels into actual text.</p>
+      <p>Your scanned pages are analyzed by Optical Character Recognition technology, converting what comes in as pixels into actual text.</p>
     </div>
     <div class=card>
       <h3>2</h3>
-      <p>Document text is are stored in a relational database on the cloud and may be run through our Machine Learning, Artificial Intelligence algorithms to assign category and keyword taxonomies.</p>
+      <p>Document text is stored in a secure relational database and can be run through our AI to assign category and keyword taxonomies.</p>
     </div>
     <div class=card>
       <h3>3</h3>
-      <p>Files are then converted into PDFs and stored on a secure, redundant server on the Amazon Web Services Cloud.</p>
+      <p>PDF files are stored on a secure, redundant server on the Amazon Web Services Cloud.</p>
     </div>
     <div class=card>
       <h3>4</h3>
-      <p>To retrieve documents, login to the web archive from your desktop or mobile device and search by file name, text and potentially category category or other taxonomy. Select one or more documents to view or download.</p>
+      <p>To retrieve documents, login to the web archive from your desktop or mobile device and search by file name, text and potentially category or other taxonomy. Select one or more documents to view or download.</p>
     </div>
   </div>
 
@@ -113,7 +113,7 @@ category: full-width image-captions
 
 #### Advanced Content Parsing
 
-When clients require advanced analysis and categorization of their documents, we work with them to define and clarify the taxonomical system, then run a number of documents (hundreds to thousands) through the system, making manual adjustments to train the algorithm in accurate recognition. We have 89% accuracy; a number which continually improves with technology. Uncategorized documents can be manually corrected.
+When clients require advanced analysis and categorization of their documents, we work with them to define and clarify the taxonomical system, then run a number of documents (hundreds to thousands) through the system, making manual adjustments to train the algorithm in accurate recognition. We have ~90% accuracy; a number which continually improves with technology. Uncategorized documents can be manually corrected, further informing the algorithm.
 
 </section>
 <section markdown=1 id=aboutus>
@@ -136,7 +136,7 @@ When clients require advanced analysis and categorization of their documents, we
           <path d="M178.516 111.788C191.921 104.493 230.357 104.3 246.152 111.092" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div> <!-- /square -->
-      <p>John Slocom is a passionate coder who built the PageFlow tool to facilitate the workflow of large automobile dealerships, and discovered that it also fits the needs of many smaller operations.
+      <p>John Slocum is a passionate coder who built the PageFlow tool to facilitate the workflow of large automobile dealerships, and discovered that it also fits the needs of many smaller operations.
 When he's not coding, you'll find him playing his piano or bringing he and his wife, Mary's three children to one of the many activities they enjoy here in Pensacola.</p>
     </div> <!-- /card -->
     <div class=card>
@@ -169,16 +169,17 @@ We feel very fortunate to have a small team of fantastic folks who pick up docum
       </svg>
       <address>
         <h3>PageFlow</h3>
-        <p>1 Palafox Place</p>
-        <p>Pensacola, FL 32501</p>
-        <p class=phonenumber>850 999-9999</p>
-        <p>info@pageflow.com</p>
+        <p>4400 Bayou Blvd. Suite 21H</p>
+        <p>Pensacola, FL 32503</p>
+        <p><a href="tel:+12016794168" class=phonenumber>201 679-4168</a></p>
+        <p><a href="mailto:support@pageflow.com">support@pageflow.com</a></p>
       </address>
     </div> <!-- ./infobox -->
     <form id=contactform action="http://127.0.0.1:5000/form/contact" method=post>
       <input type=text name=name placeholder="Name" required autocomplete=true/>
       <input type=email name=email placeholder="Email" required autocomplete=true/>
       <textarea rows=5 name=message placeholder="Your Message..."></textarea>
+      <input type=hidden name=phone value="8882221111" />
       <button type=submit>Submit</button>
       <div class=formnotification></div>
     </form>
