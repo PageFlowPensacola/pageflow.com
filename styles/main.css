@@ -30,6 +30,11 @@ body {
 
 a {
   color: var(--highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--success);
 }
 
 /* Typeography */
