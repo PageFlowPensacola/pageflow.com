@@ -175,7 +175,7 @@ We feel very fortunate to have a small team of fantastic folks who pick up docum
         <p><a href="mailto:support@pageflow.com">support@pageflow.com</a></p>
       </address>
     </div> <!-- ./infobox -->
-    <form id=contactform action="http://127.0.0.1:5000/form/contact" method=post>
+    <form id=contactform action="https://flaskmail-7f0937004c87.herokuapp.com/form/contact" method=post>
       <input type=text name=name placeholder="Name" required autocomplete=true/>
       <input type=email name=email placeholder="Email" required autocomplete=true/>
       <textarea rows=5 name=message placeholder="Your Message..."></textarea>
