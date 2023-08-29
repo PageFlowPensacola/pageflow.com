@@ -82,7 +82,7 @@ category: full-width image-captions
         </svg>
 
       </div>
-      <p>Document text is analyzed and processed through our machine learning algorithm for categorization according to taxonomies you define (we can help with that, too.)</p>
+      <p>Document text is analyzed and processed through our machine learning algorithm for categorization according to taxonomies you define. (We can help with that, too.)</p>
     </div>
   </div>
 </section>
