@@ -10,6 +10,9 @@
   --brand-secondary: #D89646;
   --brand-secondary-dark: #5b3c1f;
   --brand-secondary-light: #f6e9c8;
+  --success: #328A4E;
+  --warning: #D89646;
+  --error: #D85946;
   --black: #010101;
   --white: #F7F9FB;
 }
@@ -402,6 +405,28 @@ button:hover {
   background: var(--brand-primary-ultra-light);
   border: 1px solid var(--brand-primary-ultra-dark);
   cursor: pointer;
+}
+
+.formnotification {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: 'Arap', sans-serif;
+}
+
+.formnotification.success {
+  color: var(--success);
+  border: 2px solid var(--success);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.formnotification.error {
+  color: var(--error);
+  border: 2px solid var(--error);
+  padding: 1em;
+  border-radius: 1em;
 }
 
 /* About */

@@ -1,5 +1,5 @@
 import {choc, set_content, on, DOM} from './factory.js';
-const {H1, "svg:a": SVGA, "svg:g": GROUP, "svg:circle": CIRCLE, "svg:path": PATH, "svg:svg": SVG, "svg:text": SVGTEXT} = choc; //autoimport
+const {P} = choc; //autoimport
 
 on('click', '#downarrow', function (event) {
   event.match.closest('section').nextElementSibling.scrollIntoView({ behavior: "smooth" });
@@ -35,3 +35,34 @@ const burgerClick = function () {
 }
 
 on("click", "button.hamburger", burgerClick);
+
+on("submit", "#contactform", function (event) {
+  event.preventDefault();
+  const formData = new FormData(event.match);
+  const data = Object.fromEntries(formData.entries());
+  fetch(event.match.action, {
+    method: event.match.method,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'POST'
+    },
+    body: JSON.stringify(data)
+  }).then(response => {
+    if (response.status === 200) {
+      set_content('.formnotification', P({class: 'success'}, `Message sent. We'll get back to you ASAP.`));
+      DOM('.formnotification').classList.add('success');
+      DOM('#contactform').reset();
+    } else {
+      set_content('.formnotification', P({class: 'error'}, `Whoops. Please try calling or emailing us.`));
+      DOM('.formnotification').classList.add('error');
+      DOM('#contactform').reset();
+    }
+  }).catch(error => {
+    console.error(error);
+    set_content('.formnotification', P({class: 'error'}, `Whoops. Please try calling or emailing us.`));
+    DOM('.formnotification').classList.add('error');
+    DOM('#contactform').reset();
+  });
+});

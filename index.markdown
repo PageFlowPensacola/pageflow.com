@@ -175,11 +175,12 @@ We feel very fortunate to have a small team of fantastic folks who pick up docum
         <p>info@pageflow.com</p>
       </address>
     </div> <!-- ./infobox -->
-    <form>
+    <form id=contactform action="http://127.0.0.1:5000/form/contact" method=post>
       <input type=text name=name placeholder="Name" required autocomplete=true/>
       <input type=email name=email placeholder="Email" required autocomplete=true/>
-      <textarea rows=5 name=message placeholder="Your Message..." required></textarea>
+      <textarea rows=5 name=message placeholder="Your Message..."></textarea>
       <button type=submit>Submit</button>
+      <div class=formnotification></div>
     </form>
   </div>
 </section>
