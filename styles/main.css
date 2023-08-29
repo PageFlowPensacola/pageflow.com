@@ -363,12 +363,26 @@ p.phonenumber {
   gap: 1em;
   width: 90%;
   padding-top: 2em;
+  align-items: flex-end;
 }
 
-#contact-section form input {
-  background: var(--brand-primary-ultra-light);
+#contact-section form button {
+  margin-right: 1em;
+}
+
+#contact-section form input,
+#contact-section form textarea {
+  background: var(--brand-secondary-light);
   border: 1px solid var(--brand-primary-ultra-dark);
   padding: 1em;
+  width: 100%;
+  font-family: 'Asap';
+}
+
+#contact-section form input:focus,
+#contact-section form textarea:focus {
+  background: var(--brand-primary-ultra-light);
+  color: var(--brand-primary-ultra-dark);
 }
 
 button {
@@ -376,19 +390,21 @@ button {
   background: var(--brand-primary-ultra-dark);
   color: var(--brand-primary-ultra-light);
   border: none;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 0.2em;
   width: fit-content;
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 900;
 }
 
-/* .infobox svg path {
-  stroke: var(--brand-primary-ultra-dark);
-  fill: none;
-  width: 100px;
-  height: auto;
-} */
+button:hover {
+  color: var(--brand-primary-ultra-dark);
+  background: var(--brand-primary-ultra-light);
+  border: 1px solid var(--brand-primary-ultra-dark);
+  cursor: pointer;
+}
+
+/* About */
 
 svg path#hishead,
 svg path#hisleftarm,

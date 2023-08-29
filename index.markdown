@@ -176,9 +176,9 @@ We feel very fortunate to have a small team of fantastic folks who pick up docum
       </address>
     </div> <!-- ./infobox -->
     <form>
-      <input type=text name=name placeholder="Name" required/>
-      <input type=email name=email placeholder="Email" required/>
-      <input type=textarea rows=5 name=message placeholder="Your message" required>
+      <input type=text name=name placeholder="Name" required autocomplete=true/>
+      <input type=email name=email placeholder="Email" required autocomplete=true/>
+      <textarea rows=5 name=message placeholder="Your Message..." required></textarea>
       <button type=submit>Submit</button>
     </form>
   </div>
