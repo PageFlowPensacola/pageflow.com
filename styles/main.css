@@ -359,7 +359,7 @@ section.paragraph h3 {
 }
 
 .infobox svg {
-  stroke: var(--brand-primary-ultra-dark);
+  stroke: var(--brand-primary-dark);
   fill: none;
   width: 200px;
   height: auto;
@@ -542,29 +542,6 @@ footer {
   xxl: 1400px
 */
 
-@media (min-width: 992px) {}
-
-@media (min-width: 768px) {
-
-  .row.two .card,
-  .row.two .infobox,
-  .row.two form {
-    max-width: 45%;
-  }
-
-  .row.three .card {
-    width: 30%;
-  }
-
-  .row.four .card {
-    width: 23%;
-  }
-
-  .card>p {
-    max-width: 80%;
-  }
-
-}
 
 @media (min-width: 576px) {
 
@@ -594,5 +571,48 @@ footer {
     border: none;
     padding: 0;
     margin: 0 0.5em;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .row.two .card,
+  .row.two .infobox,
+  .row.two form {
+    max-width: 45%;
+  }
+
+  .row.three .card {
+    width: 30%;
+  }
+
+  .row.four .card {
+    width: 43%;
+  }
+
+  .card>p {
+    max-width: 80%;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .row.two .card,
+  .row.two .infobox,
+  .row.two form {
+    max-width: 45%;
+  }
+
+  .row.three .card {
+    width: 30%;
+  }
+
+  .row.four .card {
+    width: 23%;
+  }
+
+  .card>p {
+    max-width: 60%;
   }
 }
